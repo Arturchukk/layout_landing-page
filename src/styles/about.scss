@@ -1,0 +1,32 @@
+.about {
+  padding-top: 56px;
+
+  @media (max-width: 479.98px) {
+    padding-top: 48px;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+
+    @media (max-width: 744px) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    flex: 1 1 auto;
+  }
+
+  &__text {
+    line-height: 140%;
+    p:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: 744px) {
+      max-width: 500px;
+    }
+  }
+}

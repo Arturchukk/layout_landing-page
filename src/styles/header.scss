@@ -49,7 +49,7 @@
 
 .bottom-header {
   &__title {
-    font-family: "Space Grotesk", sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 56px;
     font-weight: 700;
 
@@ -72,14 +72,34 @@
     gap: 24px;
   }
 
-  &__icon {
-    transition: transform 0.3s ease 0s;
+  	&__phone {
+       transform: translateX(-20px);
+       opacity: 0;
+       visibility: hidden;
+       transition: transform 0.3s ease, opacity 0.3s ease;
+		}
 
-    &:hover {
-      transform: scale(1.2);
-    }
-  }
+  	&__phone-wrapper {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+
+      &:hover .actions-header__phone {
+          opacity: 1;
+         transform: translateX(0);
+         visibility: visible;
+      }
+		}
+
+		&__icon {
+        transition: transform 0.3s ease 0s;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+		}
 }
+
 
 .aside {
   &__menu {
@@ -99,6 +119,10 @@
       transform: translateX(0%);
     }
   }
+}
+
+  html:has(.aside__menu:target) {
+     overflow: hidden; /* not to scroll the page */
 }
 
 .menu {
@@ -146,7 +170,7 @@
   }
 
   &__link {
-    font-family: "Space Grotesk", sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
     line-height: 140%;
     letter-spacing: 2px;
@@ -172,7 +196,7 @@
   }
 
   &__link {
-    font-family: "Space Grotesk", sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 22px;
     font-weight: 700;
     letter-spacing: 2px;

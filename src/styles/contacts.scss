@@ -21,7 +21,7 @@
   }
 
   &__title {
-     @include title-margin-bottom;
+    @include title-margin-bottom;
   }
 }
 
@@ -43,17 +43,25 @@
   &__input {
     border-radius: 8px;
     background-color: $bgColor;
+    border: 1px solid $bgColor;
     width: 100%;
     padding-inline: 16px;
     height: 48px;
     font-size: 14px;
     line-height: 140%;
+    transition: all 0.3s ease;
+    color: rgba(41, 41, 41, 1);
+
+    &:hover {
+      border: 1px solid rgba(213, 215, 222, 1);
+    }
 
     &::placeholder {
       color: $placeHolderColor;
     }
 
-    &:focus {
+    &:focus,
+    &:active {
       border: 1px solid $mainColor;
     }
   }
@@ -61,20 +69,32 @@
   &__textarea {
     border-radius: 8px;
     background: $bgColor;
+    border: 1px solid $bgColor;
     width: 100%;
     min-height: 148px;
     padding: 16px 14px;
     resize: none;
+    transition: all 0.3s ease;
+    color: rgba(41, 41, 41, 1);
 
     &::placeholder {
       color: $placeHolderColor;
     }
+
+    &:hover {
+      border: 1px solid rgba(213, 215, 222, 1);
+    }
+
+    &:focus,
+    &:active {
+      border: 1px solid $mainColor;
+    }
   }
 
   &__button {
-    border: 2px solid rgba(240, 241, 244, 1);
+    border: 2px solid $mainColor;
     border-radius: 8px;
-    background: $bgColor;
+    background-color: $mainColor;
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
     display: flex;
@@ -84,10 +104,16 @@
     padding: 15px;
     width: 100%;
     transition: all 0.3s ease;
+    color: rgba(255, 255, 255, 1);
 
     &:hover {
-      background-color: $mainColor;
-      border: 2px solid $mainColor;
+      border: 2px solid rgba(240, 241, 244, 1);
+      background: rgba(248, 248, 250, 1);
+      color: $mainColor;
+    }
+
+    &:active {
+      background: rgba(17, 17, 17, 1);
       color: rgba(255, 255, 255, 1);
     }
   }

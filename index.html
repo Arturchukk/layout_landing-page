@@ -17,7 +17,12 @@
           <div class="header__container">
             <a href="#" class="header__logo"><img src="./src/images/Logo.png" alt="Image"></a>
             <div class="header__actions actions-header">
-              <a href="#" class="actions-header__icon actions-header__icon--phone"><img src="./src/icons/Icon-Phone-call.svg" alt="Image"></a>
+              <div class="actions-header__phone-wrapper">
+                <a href="tel:+123455555555" class="actions-header__phone">+1 234 5555-55-55</a>
+                <a href="#" class="actions-header__icon actions-header__icon--phone">
+                  <img src="./src/icons/Icon-Phone-call.svg" alt="Image">
+                </a>
+              </div>
               <a href="#menu" class="actions-header__icon actions-header__icon--burger"><img src="./src/icons/Icon-Burger-menu.svg" alt="Image"></a>
             </div>
           </div>
@@ -153,7 +158,7 @@
           <div class="contacts__container">
             <h2 class="contacts__title title">Contact us</h2>
             <div class="contacts__body">
-              <form action="#" class="contacts__form form-contacts">
+              <form onsubmit="this.reset(); return false;" class="contacts__form form-contacts">
                 <div class="form-contacts__body">
                   <input autocomplete="off" type="text"
                    name="firstname"

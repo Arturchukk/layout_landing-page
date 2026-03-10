@@ -8,11 +8,18 @@
 @import '../styles/about';
 @import '../styles/contacts';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Space Mono', monospace;
   color: $mainColor;
   line-height: 1;
-  scroll-behavior: smooth;
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 .wrapper {

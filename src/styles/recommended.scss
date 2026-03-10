@@ -2,7 +2,7 @@
   @include padding-top-section;
 
   &__title {
-      @include title-margin-bottom;
+    @include title-margin-bottom;
   }
 
   &__items {
@@ -33,10 +33,10 @@
 
   @media (max-width: 479.98px) {
     &__title {
-       @include title-margin-bottom;
+      @include title-margin-bottom;
     }
 
-     &__items {
+    &__items {
       flex-direction: column;
       margin-block: -24px;
     }
@@ -49,8 +49,8 @@
     .recommended {
       padding-top: 64px;
     }
-    }
   }
+}
 
 .item-recommended {
   display: flex;

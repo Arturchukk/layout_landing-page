@@ -60,6 +60,10 @@
       color: $placeHolderColor;
     }
 
+    &:focus {
+      outline: none;
+    }
+
     &:focus,
     &:active {
       border: 1px solid $mainColor;
@@ -83,6 +87,10 @@
 
     &:hover {
       border: 1px solid rgba(213, 215, 222, 1);
+    }
+
+    &:focus {
+      outline: none;
     }
 
     &:focus,

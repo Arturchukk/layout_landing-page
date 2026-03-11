@@ -4,7 +4,6 @@
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 36px;
   padding-bottom: 93px;
   display: flex;
   flex-direction: column;
@@ -77,6 +76,10 @@
        opacity: 0;
        visibility: hidden;
        transition: transform 0.3s ease, opacity 0.3s ease;
+
+       @media (max-width: 1260px){
+           display: none;
+       }
 		}
 
   	&__phone-wrapper {
@@ -126,7 +129,6 @@
 }
 
 .menu {
-  padding-top: 36px;
   padding-bottom: 93px;
   height: 100vh;
   background-color: #ececec;

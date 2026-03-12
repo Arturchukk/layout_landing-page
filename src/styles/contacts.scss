@@ -1,8 +1,9 @@
 .contacts {
-  padding-top: 120px;
+  padding-block: 120px;
 
   @media (max-width: 479.98px) {
     padding-top: 104px;
+    padding-bottom: 64px;
   }
 
   &__body {

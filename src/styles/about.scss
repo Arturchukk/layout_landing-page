@@ -10,7 +10,7 @@
     justify-content: space-between;
     gap: 24px;
 
-    @media (max-width: 744px) {
+    @media (max-width: 479.98px) {
       flex-direction: column;
     }
   }
@@ -21,12 +21,17 @@
 
   &__text {
     line-height: 140%;
+    max-width: 500px;
     p:not(:last-child) {
       margin-bottom: 20px;
     }
 
-    @media (min-width: 744px) {
-      max-width: 500px;
+    @media (max-width: 744px) {
+      max-width: 280px;
+    }
+
+    @media (max-width: 479.98px) {
+      max-width: none;
     }
   }
 }
